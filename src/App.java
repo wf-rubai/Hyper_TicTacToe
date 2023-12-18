@@ -46,6 +46,7 @@ public class App {
         frame.setLocationRelativeTo(null);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setLayout(null);
+        frame.getContentPane().setBackground(Color.red);
 
         mPanel.setBounds(0, 0, 500, 500);
         mPanel.setBackground(Color.darkGray);
@@ -62,13 +63,13 @@ public class App {
             }
         }
 
-        st[0][0].panel().setLocation(020, 020);
-        st[0][1].panel().setLocation(170, 020);
-        st[0][2].panel().setLocation(320, 020);
-        st[1][0].panel().setLocation(020, 170);
+        st[0][0].panel().setLocation(20, 20);
+        st[0][1].panel().setLocation(170, 20);
+        st[0][2].panel().setLocation(320, 20);
+        st[1][0].panel().setLocation(20, 170);
         st[1][1].panel().setLocation(170, 170);
         st[1][2].panel().setLocation(320, 170);
-        st[2][0].panel().setLocation(020, 320);
+        st[2][0].panel().setLocation(20, 320);
         st[2][1].panel().setLocation(170, 320);
         st[2][2].panel().setLocation(320, 320);
 
@@ -78,13 +79,13 @@ public class App {
             }
         }
 
-        lock[0][0].setLocation(020, 020);
-        lock[0][1].setLocation(170, 020);
-        lock[0][2].setLocation(320, 020);
-        lock[1][0].setLocation(020, 170);
+        lock[0][0].setLocation(20, 20);
+        lock[0][1].setLocation(170, 20);
+        lock[0][2].setLocation(320, 20);
+        lock[1][0].setLocation(20, 170);
         lock[1][1].setLocation(170, 170);
         lock[1][2].setLocation(320, 170);
-        lock[2][0].setLocation(020, 320);
+        lock[2][0].setLocation(20, 320);
         lock[2][1].setLocation(170, 320);
         lock[2][2].setLocation(320, 320);
 
