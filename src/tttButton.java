@@ -35,6 +35,7 @@ public class tttButton extends JButton {
                     App.mPanel.add(App.lock[i][j]);
                 }
             }
+            App.mPanel.remove(App.lock[x][y]);
         }else{
             for(int i=0; i<3; i++){
                 for(int j=0; j<3; j++){
@@ -45,12 +46,16 @@ public class tttButton extends JButton {
         }
         for(int i=0; i<3; i++){
             for(int j=0; j<3; j++){
-                App.mPanel.add(App.st[i][j]);
+                App.mPanel.add(App.st[i][j].panel());
             }
         }
 
-        App.mPanel.remove(App.lock[x][y]);
         App.mPanel.updateUI();
+        App.st[App.x][App.y].game[x][y] = App.player+1;
+        if(Chaker.check(App.st[App.x][App.y].game, App.player+1, x, y)){
+            App.game[App.x][App.y] = App.player+1;
+            App.lock[App.x][App.y].add(new Circle(App.playerColor[App.player], 140, 100, 20, 20));
+        }
         App.x = x;
         App.y = y;
         add(new Circle(App.playerColor[App.player], 40, 25, 6, 7));

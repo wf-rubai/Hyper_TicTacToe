@@ -20,7 +20,8 @@ public class SubTTT {
             g2.fillRoundRect(10, 88, 120, 4, 4, 4);
         }
     };
-    JButton[][] tb = new tttButton[3][3];
+    private JButton[][] tb = new tttButton[3][3];
+    public int[][] game = new int[3][3];
     
     public JPanel panel(){
 

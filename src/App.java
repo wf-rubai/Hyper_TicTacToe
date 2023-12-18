@@ -35,7 +35,7 @@ public class App {
     };
     public static int x, y;
     public static JButton[][] lock = new JButton[3][3];
-    public static JPanel[][] st = new JPanel[3][3];
+    public static SubTTT[][] st = new SubTTT[3][3];
     public static int[][] game = new int[3][3];
     public static int player = 0;
     public static Color[] playerColor = {new Color(255, 56, 56, 170), new Color(68, 252, 108, 170)};
@@ -53,24 +53,24 @@ public class App {
 
         for(int i=0; i<3; i++){
             for(int j=0; j<3; j++){
-                st[i][j] = new SubTTT().panel();
+                st[i][j] = new SubTTT();
             }
         }
         for(int i=0; i<3; i++){
             for(int j=0; j<3; j++){
-                mPanel.add(st[i][j]);
+                mPanel.add(st[i][j].panel());
             }
         }
 
-        st[0][0].setLocation(020, 020);
-        st[0][1].setLocation(170, 020);
-        st[0][2].setLocation(320, 020);
-        st[1][0].setLocation(020, 170);
-        st[1][1].setLocation(170, 170);
-        st[1][2].setLocation(320, 170);
-        st[2][0].setLocation(020, 320);
-        st[2][1].setLocation(170, 320);
-        st[2][2].setLocation(320, 320);
+        st[0][0].panel().setLocation(020, 020);
+        st[0][1].panel().setLocation(170, 020);
+        st[0][2].panel().setLocation(320, 020);
+        st[1][0].panel().setLocation(020, 170);
+        st[1][1].panel().setLocation(170, 170);
+        st[1][2].panel().setLocation(320, 170);
+        st[2][0].panel().setLocation(020, 320);
+        st[2][1].panel().setLocation(170, 320);
+        st[2][2].panel().setLocation(320, 320);
 
         for(int i=0; i<3; i++){
             for(int j=0; j<3; j++){
