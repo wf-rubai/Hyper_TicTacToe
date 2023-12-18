@@ -9,6 +9,7 @@ public class Circle extends JLabel {
     
     private Color c;
     private int diameter, stroke, gap;
+    
     public Circle(Color c, int diamention, int diameter, int stroke, int gap){
         this.c = c;
         this.diameter = diameter;

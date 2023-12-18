@@ -49,8 +49,6 @@ public class SubTTT {
         tb[2][1].setLocation(50, 90);
         tb[2][2].setLocation(90, 90);
 
-        // panel.add(lock);
-
         return panel;
     }
 }

@@ -18,11 +18,11 @@ public class App {
             Graphics2D g2 = (Graphics2D) g;
             
             Point2D p1 = new Point2D.Float(0, 0);
-            Point2D p2 = new Point2D.Float(500, 500);
+            Point2D p2 = new Point2D.Float(450, 500);
             Color c1 = new Color(102, 0, 255);
             Color c2 = new Color(166, 0, 255);
             LinearGradientPaint gradientPaint = new LinearGradientPaint(p1, p2,
-                                                new float[]{0f, 0.9f},
+                                                new float[]{0f, 0.7f},
                                                 new Color[]{c1, c2});
             g2.setPaint(gradientPaint);
             g2.fillRect(0, 0, 500, 500);
@@ -62,13 +62,13 @@ public class App {
             }
         }
 
-        st[0][0].setLocation(20, 20);
-        st[0][1].setLocation(170, 20);
-        st[0][2].setLocation(320, 20);
-        st[1][0].setLocation(20, 170);
+        st[0][0].setLocation(020, 020);
+        st[0][1].setLocation(170, 020);
+        st[0][2].setLocation(320, 020);
+        st[1][0].setLocation(020, 170);
         st[1][1].setLocation(170, 170);
         st[1][2].setLocation(320, 170);
-        st[2][0].setLocation(20, 320);
+        st[2][0].setLocation(020, 320);
         st[2][1].setLocation(170, 320);
         st[2][2].setLocation(320, 320);
 
@@ -78,13 +78,13 @@ public class App {
             }
         }
 
-        lock[0][0].setLocation(20, 20);
-        lock[0][1].setLocation(170, 20);
-        lock[0][2].setLocation(320, 20);
-        lock[1][0].setLocation(20, 170);
+        lock[0][0].setLocation(020, 020);
+        lock[0][1].setLocation(170, 020);
+        lock[0][2].setLocation(320, 020);
+        lock[1][0].setLocation(020, 170);
         lock[1][1].setLocation(170, 170);
         lock[1][2].setLocation(320, 170);
-        lock[2][0].setLocation(20, 320);
+        lock[2][0].setLocation(020, 320);
         lock[2][1].setLocation(170, 320);
         lock[2][2].setLocation(320, 320);
 

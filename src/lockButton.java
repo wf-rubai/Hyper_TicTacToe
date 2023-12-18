@@ -13,7 +13,7 @@ public class lockButton extends JButton {
         this.setBorderPainted(false);
         this.setFocusable(false);
 
-        // this.add(new Circle(App.playerColor[App.player], 140, 100, 20, 15));
+        // this.add(new Circle(App.playerColor[App.player], 140, 100, 20, 20));
     }
 
     @Override
