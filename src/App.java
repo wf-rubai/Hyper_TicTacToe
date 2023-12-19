@@ -1,5 +1,6 @@
 import java.awt.BasicStroke;
 import java.awt.Color;
+import java.awt.Font;
 import java.awt.Graphics;
 import java.awt.Graphics2D;
 import java.awt.LinearGradientPaint;
@@ -7,7 +8,6 @@ import java.awt.geom.Point2D;
 
 import javax.swing.JButton;
 import javax.swing.JFrame;
-import javax.swing.JLabel;
 import javax.swing.JPanel;
 
 public class App {
@@ -49,17 +49,17 @@ public class App {
             g2.fillRoundRect(320, 320, 140, 140, 25, 25);
         }
     };
-    public static JLabel massage = new JLabel(){
+    public static JButton massage = new JButton("PLAYER-1 WIN 🥇"){
         @Override
         protected void paintComponent(Graphics g){
             super.paintComponent(g);
             Graphics2D g2 = (Graphics2D) g;
             
             g2.setColor(new Color(24, 21, 84, 100));
-            g2.fillRoundRect(10, 185, 460, 110, 7, 7);
+            g2.fillRoundRect(10, 10, 460, 110, 7, 7);
             g2.setColor(new Color(24, 21, 84));
             g2.setStroke(new BasicStroke(4));
-            g2.drawRoundRect(10, 185, 460, 110, 7, 7);
+            g2.drawRoundRect(10, 10, 460, 110, 7, 7);
         }
     };
     public static int x, y;
@@ -68,7 +68,7 @@ public class App {
     public static SubTTT[][] st = new SubTTT[3][3];
     public static int[][] game = new int[3][3];
     public static int player = 0;
-    public static Color[] playerColor = {new Color(255, 56, 56, 170), new Color(68, 252, 108, 170)};
+    public static Color[] playerColor = {new Color(152, 247, 42, 170), new Color(247, 127, 42, 170)};
 
     public static void main(String[] args) throws Exception {
 
@@ -82,7 +82,14 @@ public class App {
         mPanel.setBackground(Color.darkGray);
         mPanel.setLayout(null);
 
-        massage.setBounds(0, 0, 480, 500);
+        massage.setBounds(0, 175, 480, 130);
+        massage.setFont(new Font(Font.DIALOG, Font.BOLD, 25));
+        massage.setForeground(new Color( 255, 200, 255));
+        massage.setLayout(null);
+        massage.setOpaque(false);
+        massage.setContentAreaFilled(false);
+        massage.setBorderPainted(false);
+        massage.setFocusable(false);
         // mPanel.add(massage);
 
         for(int i=0; i<3; i++){
