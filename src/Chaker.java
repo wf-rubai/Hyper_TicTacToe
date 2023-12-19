@@ -1,13 +1,12 @@
 public class Chaker {
 
-    private static boolean result = true;
-
     public static boolean check(int[][] arr, int playre, int x, int y){
 
         System.out.println(arr[0][0] + " " + arr[0][1] + " " + arr[0][2] + "\n");
         System.out.println(arr[1][0] + " " + arr[1][1] + " " + arr[1][2] + "\n");
         System.out.println(arr[2][0] + " " + arr[2][1] + " " + arr[2][2] + "\n\n");
-        result = true;
+        boolean result = true;
+
         for(int i=0; i<3;  i++){
             if(arr[x][i] != playre)
                 result = false;
@@ -42,5 +41,17 @@ public class Chaker {
         }
 
         return result;
+    }
+
+    public static boolean draw(int[][] arr){
+
+        for(int i=0; i<3; i++){
+            for(int j=0; j<3; j++){
+                if(arr[i][j] == 0)
+                    return false;
+            }
+        }
+
+        return true;
     }
 }

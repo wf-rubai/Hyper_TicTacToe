@@ -1,3 +1,4 @@
+import java.awt.BasicStroke;
 import java.awt.Color;
 import java.awt.Graphics;
 import java.awt.Graphics2D;
@@ -6,6 +7,7 @@ import java.awt.geom.Point2D;
 
 import javax.swing.JButton;
 import javax.swing.JFrame;
+import javax.swing.JLabel;
 import javax.swing.JPanel;
 
 public class App {
@@ -31,9 +33,37 @@ public class App {
             g2.fillRoundRect(310, 20, 10, 440, 10, 10);
             g2.fillRoundRect(20, 160, 440, 10, 10, 10);
             g2.fillRoundRect(20, 310, 440, 10, 10, 10);
+            g2.fillRect(150, 150, 30, 30);
+            g2.fillRect(300, 150, 30, 30);
+            g2.fillRect(150, 300, 30, 30);
+            g2.fillRect(300, 300, 30, 30);
+            g2.setPaint(gradientPaint);
+            g2.fillRoundRect(20, 20, 140, 140, 25, 25);
+            g2.fillRoundRect(170, 20, 140, 140, 25, 25);
+            g2.fillRoundRect(320, 20, 140, 140, 25, 25);
+            g2.fillRoundRect(20, 170, 140, 140, 25, 25);
+            g2.fillRoundRect(170, 170, 140, 140, 25, 25);
+            g2.fillRoundRect(170, 320, 140, 140, 25, 25);
+            g2.fillRoundRect(20, 320, 140, 140, 25, 25);
+            g2.fillRoundRect(320, 170, 140, 140, 25, 25);
+            g2.fillRoundRect(320, 320, 140, 140, 25, 25);
+        }
+    };
+    public static JLabel massage = new JLabel(){
+        @Override
+        protected void paintComponent(Graphics g){
+            super.paintComponent(g);
+            Graphics2D g2 = (Graphics2D) g;
+            
+            g2.setColor(new Color(24, 21, 84, 100));
+            g2.fillRoundRect(10, 185, 460, 110, 7, 7);
+            g2.setColor(new Color(24, 21, 84));
+            g2.setStroke(new BasicStroke(4));
+            g2.drawRoundRect(10, 185, 460, 110, 7, 7);
         }
     };
     public static int x, y;
+    public static boolean starter = true;
     public static JButton[][] lock = new JButton[3][3];
     public static SubTTT[][] st = new SubTTT[3][3];
     public static int[][] game = new int[3][3];
@@ -52,9 +82,12 @@ public class App {
         mPanel.setBackground(Color.darkGray);
         mPanel.setLayout(null);
 
+        massage.setBounds(0, 0, 480, 500);
+        // mPanel.add(massage);
+
         for(int i=0; i<3; i++){
             for(int j=0; j<3; j++){
-                st[i][j] = new SubTTT();
+                st[i][j] = new SubTTT(i, j);
             }
         }
         for(int i=0; i<3; i++){
@@ -75,7 +108,7 @@ public class App {
 
         for(int i=0; i<3; i++){
             for(int j=0; j<3; j++){
-                lock[i][j] = new lockButton();
+                lock[i][j] = new LockButton();
             }
         }
 

@@ -4,8 +4,8 @@ import java.awt.Graphics2D;
 
 import javax.swing.JButton;
 
-public class lockButton extends JButton {
-    public lockButton(){
+public class LockButton extends JButton {
+    public LockButton(){
         this.setSize(140, 140);
         this.setLayout(null);
         this.setOpaque(false);
